@@ -1,0 +1,142 @@
+#!/usr/bin/env bash
+# a Bash script that displays the time for 12 hours and 59 minutes
+
+hour=0
+minute=1
+
+while [ $hour -le 12 ]
+do
+  case $hour in
+
+    0)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+
+    1)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+
+    2)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+
+    3)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+
+    4)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+
+    5)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+
+    6)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+
+    7)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+
+    8)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+
+    9)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+
+    10)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+
+    11)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+
+    12)
+    echo "Hour: $hour"
+    while [ $minute -le 59 ]
+    do
+      echo $minute
+      ((minute++))
+    done
+    ((minute=1))
+    ;;
+  esac
+  ((hour++))
+done
