@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
-#Writes a message to a file
-while :
+# writest he mesaage I am alive to /tmp/my_process
+
+
+echo "" > /tmp/my_process
+
+while true;
 do
-	echo "I am alive!" >> /tmp/my_process
-	sleep 2
+  echo "I am alive!" >> /tmp/my_process
 done
