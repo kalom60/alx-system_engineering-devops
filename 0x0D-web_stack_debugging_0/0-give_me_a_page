@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # Script that turns on an Apache Server
-sudo apt-get -y update
-sudo apt-get -y install apache2
-sudo service apache2 start
+echo "ServerName localhost" >> /etc/apache2.conf
+service apache2 start
