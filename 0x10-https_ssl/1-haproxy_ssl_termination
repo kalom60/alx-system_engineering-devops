@@ -1,4 +1,6 @@
 global
+        maxconn 2048
+        tune.ssl.default-dh-param 2048
         log /dev/log    local0
         log /dev/log    local1 notice
         chroot /var/lib/haproxy
@@ -20,6 +22,8 @@ global
 defaults
         log     global
         mode    http
+        option  forwardfor
+        option  http-server-close
         option  httplog
         option  dontlognull
         timeout connect 5000
@@ -35,6 +39,7 @@ defaults
 
 frontend web-frontend
         bind *:80
+        reqadd X-Forwarded-Proto:\ http
         default_backend web-backend
 
 frontend web-frontends
