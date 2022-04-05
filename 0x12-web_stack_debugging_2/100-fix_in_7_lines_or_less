@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Fixes container same as task 1 with <= 7 lines of code
+
+sudo chmod 777 /etc/nginx/nginx.conf
+sudo chown nginx:nginx /etc/nginx/nginx.conf
+sudo sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+sudo pkill -9 apache
+sudo nginx -c "service nginx restart"
