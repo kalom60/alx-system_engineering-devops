@@ -9,26 +9,25 @@ import requests
 if __name__ == '__main__':
     url = 'https://jsonplaceholder.typicode.com/'
 
-    user = '{}users/'.format(url)
-    json_obj = requests.get(user).json()
+    users = requests.get("{}users".format(url)).json()
+    tasks = requests.get("{}todos".format(url)).json()
+    records = {}
 
-    user_task = {}
-    for obj in json_obj:
-        Employee_id = obj.get('id')
-        Employee_name = obj.get('username')
-        user_task[Employee_id] = []
+    for user in users:
+        Employee_id = user.get("id")
+        name = user.get("username")
 
-        todo = '{}todos?userId={}'.format(url, Employee_id)
-        tasks = requests.get(todo).json()
+        for task in tasks:
+            if (task.get("userId") == int(Employee_id)):
+                user_dict = {
+                    "task": task.get("title"),
+                    "completed": task.get("completed"),
+                    "username": name
+                }
+                tasks.append(user_dict)
 
-        for obj in tasks:
-            task_obj = {
-                'username': Employee_name,
-                'task': obj.get('title'),
-                'completed': obj.get('completed')
-            }
-            user_task[Employee_id].append(task_obj)
+        records[Employee_id] = tasks
 
     filename = 'todo_all_employees.json'
     with open(filename, 'w') as file:
-        json.dump(user_task, file)
+        json.dump(records, file)
