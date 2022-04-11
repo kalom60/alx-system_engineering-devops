@@ -22,9 +22,9 @@ if __name__ == '__main__':
     for todo in todos:
         Employee_id = todo.get("userId")
         todo_obj = {
+            "username": name.get(Employee_id),
             "task": todo.get('title'),
-            "completed": todo.get('completed'),
-            "username": name.get(Employee_id)
+            "completed": todo.get('completed')
         }
         records.get(Employee_id).append(todo_obj)
 
