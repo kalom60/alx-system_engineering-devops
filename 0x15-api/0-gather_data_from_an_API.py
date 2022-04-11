@@ -23,4 +23,4 @@ if __name__ == '__main__':
     print('Employee {} is done with tasks({}/{}):'.format(json_obj.get('name'),
           len(com_task), len(tasks)))
     for com in com_task:
-        print(com)
+        print('\t', com)
