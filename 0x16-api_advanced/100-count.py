@@ -39,7 +39,7 @@ def count_words(subreddit, word_list):
     """If no posts match or the subreddit is invalid, print nothing"""
     rec = recurse(subreddit)
     if rec is None:
-        return 
+        return
     count = {word: 0 for word in word_list}
     for i in rec:
         for word in word_list:
