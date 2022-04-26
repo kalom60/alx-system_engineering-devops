@@ -40,7 +40,7 @@ def count_words(subreddit, word_list):
     rec = recurse(subreddit)
     if rec is None:
         return
-    count = {word: 0 for word in word_list}
+    count = {word: 0 for word in sorted(word_list)}
     for i in rec:
         for word in word_list:
             if word in i.lower():
@@ -50,4 +50,5 @@ def count_words(subreddit, word_list):
         if count[num] == 0:
             del count[num]
 
-    return count
+    for k, v in count.items():
+        print(k, ': ', v)
