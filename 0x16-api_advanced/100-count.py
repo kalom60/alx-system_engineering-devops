@@ -51,4 +51,4 @@ def count_words(subreddit, word_list):
             del count[num]
 
     for k, v in count.items():
-        print(k, ': ', v)
+        return '{}: {}'.format(k, v)
