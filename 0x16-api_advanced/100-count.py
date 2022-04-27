@@ -50,5 +50,4 @@ def count_words(subreddit, word_list):
         if count[num] == 0:
             del count[num]
 
-    for k, v in count.items():
-        return '{}: {}'.format(k, v)
+    return count
