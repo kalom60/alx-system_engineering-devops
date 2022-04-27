@@ -51,5 +51,4 @@ def count_words(subreddit, word_list):
             del count[num]
 
     count = dict(sorted(count.items(), key=lambda x: x[1], reverse=True))
-    for k, v in count.items():
-        print(f'{k}: {v}')
+    return count
