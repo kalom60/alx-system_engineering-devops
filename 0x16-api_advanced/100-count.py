@@ -33,7 +33,7 @@ def hot_print(res, word_list, param, hot_dict):
 
 def count_words(subreddit, word_list, param1=None, hot_dict={}):
     """
-    If no posts match or the subreddit is invalid, print nothing.I
+    If no posts match or the subreddit is invalid, print nothing.
     """
     url = "https://www.reddit.com"
     res = requests.get("{}/r/{}/hot.json".format(url, subreddit),
