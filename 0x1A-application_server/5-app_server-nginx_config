@@ -73,8 +73,9 @@ rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
 	}
 
 	location / {
+          rewrite ^/ /2-hbnb break;
 	        include proxy_params;
-		proxy_pass http://localhost:5003/2-hbnb/;
+		      proxy_pass http://localhost:5003/2-hbnb/;
 	}
 
 	#location / {
